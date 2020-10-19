@@ -1,24 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftyDice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap or Shake..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0J2-NV-UXx">
+                                <rect key="frame" x="149" y="297" width="598" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d1" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yq5-vF-48v">
+                                <rect key="frame" x="348" y="132" width="200" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="oCP-mv-4N1"/>
+                                    <constraint firstAttribute="width" constant="200" id="vpJ-AN-UzB"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="oCP-mv-4N1"/>
+                                        <exclude reference="vpJ-AN-UzB"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="oCP-mv-4N1"/>
+                                        <include reference="vpJ-AN-UzB"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0G-lD-0de">
+                                <rect key="frame" x="0.0" y="-44" width="896" height="502"/>
+                                <connections>
+                                    <action selector="buttonGotPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="FEP-6u-lex"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="F0G-lD-0de" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6KI-Eq-nIw"/>
+                            <constraint firstItem="F0G-lD-0de" firstAttribute="centerX" secondItem="0J2-NV-UXx" secondAttribute="centerX" id="86b-oj-ZJT"/>
+                            <constraint firstItem="0J2-NV-UXx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="105" id="Bap-E0-nGV"/>
+                            <constraint firstItem="yq5-vF-48v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EBe-se-A4W"/>
+                            <constraint firstItem="F0G-lD-0de" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-44" id="G90-ql-Fs3"/>
+                            <constraint firstItem="yq5-vF-48v" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="N8U-rQ-Cdc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0J2-NV-UXx" secondAttribute="bottom" constant="90" id="RVh-cq-jIK">
+                                <variation key="heightClass=compact" constant="60"/>
+                            </constraint>
+                            <constraint firstItem="F0G-lD-0de" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZtB-1H-ueq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0J2-NV-UXx" secondAttribute="trailing" constant="95" id="aWu-Pp-Wfc"/>
+                            <constraint firstItem="yq5-vF-48v" firstAttribute="centerY" secondItem="F0G-lD-0de" secondAttribute="centerY" id="dIE-Jm-AGQ"/>
+                            <constraint firstItem="yq5-vF-48v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="78" id="gIC-30-H9I"/>
+                            <constraint firstItem="F0G-lD-0de" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="kds-KR-oZA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yq5-vF-48v" secondAttribute="trailing" constant="80" id="n3S-l8-W0d"/>
+                            <constraint firstItem="yq5-vF-48v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="276" id="pnc-Ri-BUY"/>
+                            <constraint firstItem="yq5-vF-48v" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xJ0-WV-pYg"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6KI-Eq-nIw"/>
+                                <exclude reference="ZtB-1H-ueq"/>
+                                <exclude reference="EBe-se-A4W"/>
+                                <exclude reference="xJ0-WV-pYg"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="6KI-Eq-nIw"/>
+                                <include reference="ZtB-1H-ueq"/>
+                                <exclude reference="aWu-Pp-Wfc"/>
+                                <exclude reference="n3S-l8-W0d"/>
+                                <include reference="EBe-se-A4W"/>
+                                <exclude reference="N8U-rQ-Cdc"/>
+                                <exclude reference="dIE-Jm-AGQ"/>
+                                <exclude reference="gIC-30-H9I"/>
+                                <exclude reference="pnc-Ri-BUY"/>
+                                <include reference="xJ0-WV-pYg"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="criticalLabel" destination="0J2-NV-UXx" id="AWM-MX-mWq"/>
+                        <outlet property="diceImageView" destination="yq5-vF-48v" id="BAg-Vh-bjA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="44.866071428571423" y="111.59420289855073"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="d1" width="43" height="35"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
